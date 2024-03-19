@@ -31,4 +31,4 @@ The recursive Selection Sort shows a significant increase in running time as the
 
 output has shown above.
 
-While Random Pivot Quicksort does better than Fixed Pivot Quicksort and significantly better than the recursive Selection Sort, it does not surpass TimSort. TimSort is a merge sort variant that benefits from pre-sorted patterns in the data with complexity of  $O(n log n)$.
+While Random Pivot Quicksort does better than Fixed Pivot Quicksort and significantly better than the recursive Selection Sort, it does not surpass TimSort. TimSort is a merge sort variant that benefits from pre-sorted patterns in the data with complexity better than  $O(n log n)$.
