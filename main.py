@@ -3,7 +3,6 @@ import time
 import tabulate
 
 def ssort(L):
-    ### selection sort
     if (len(L) == 1):
         return(L)
     else:
@@ -14,7 +13,6 @@ def ssort(L):
         return [L[0]] + ssort(L[1:])
         
 def qsort(a, pivot_fn):
-    ## TO DO
   if len(a) <= 1:
     return a
   else:
@@ -59,17 +57,13 @@ def compare_sort(sizes=[100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 10
       indicating the number of milliseconds it takes
       for each method to run on each value of n
     """
-    ### TODO - sorting algorithms for comparison  
     result = []
     for size in sizes:
-        # create list in ascending order
         mylist = list(range(size))
         random.shuffle(mylist)
         qsort_fixed_pivot_time = time_search(lambda lst: qsort(lst, lambda lst: lst[0]), mylist[:])
         qsort_random_pivot_time = time_search(lambda lst: qsort(lst, lambda lst: random.choice(lst)), mylist[:])
         tim_sort_time = time_search(sorted, mylist[:])
-        # shuffles list if needed
-        #random.shuffle(mylist)
         result.append([
             len(mylist),
             qsort_fixed_pivot_time,
